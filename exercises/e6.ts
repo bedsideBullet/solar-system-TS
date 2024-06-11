@@ -3,12 +3,10 @@ import { Asteroid } from "../data/data";
 // SPACE DATA EXERCISE 6
 // Return an array with all asteroids discovered after a given year
 export function getAsteroidsDiscoveredAfterYear(
-  asteroids: Asteroid[],
-  year: number
+	asteroids: Asteroid[],
+	year: number
 ) {
-  return asteroids
-    .filter((asteroid) => asteroid.discoveryYear > year)
-    .map((asteroid) => asteroid);
+	return asteroids.filter((asteroid) => asteroid.discoveryYear > year);
 }
 
 // === TEST YOURSELF ===

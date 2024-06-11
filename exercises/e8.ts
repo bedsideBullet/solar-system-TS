@@ -5,17 +5,17 @@ import { Planet } from "../data/data";
 
 //  must have destructured parameters
 export function findPlanetByMoon({
-  planets,
-  moonName,
+	planets,
+	moonName,
 }: {
-  planets: Planet[];
-  moonName: string;
+	planets: Planet[];
+	moonName: string;
 }) {
-  return planets.find(
-    (planet) =>
-      Array.isArray(planet.moons) &&
-      planet.moons.some((moon) => moon.toLowerCase() === moonName.toLowerCase())
-  );
+	return planets.find(
+		(planet) =>
+			planet.moons &&
+			planet.moons.some((moon) => moon.toLowerCase() === moonName.toLowerCase())
+	);
 }
 
 // === TEST YOURSELF ===

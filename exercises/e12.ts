@@ -5,10 +5,10 @@ import { AllData } from "../data/data";
 
 // Return example: 42
 export const allPlanetsMoonsCount = (data: AllData) => {
-  const moonCount = data.planets
-    .filter((planet) => planet.moonsCount > 0)
-    .map((planet) => planet.moonsCount);
-  return moonCount.reduce((total, currentCount) => total + currentCount, 0);
+	return data.planets.reduce(
+		(acc, planet) => (planet.moonsCount ? acc + planet.moonsCount : acc),
+		0
+	);
 };
 
 // === TEST YOURSELF ===
